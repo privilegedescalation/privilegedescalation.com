@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privileged Escalation - Security Education & Research</title>
+    <title>Privileged Escalation - Open-source Headlamp Plugins</title>
     <link rel="stylesheet" href="style.css">
-    <meta name="description" content="A resource for understanding privilege escalation techniques, vulnerabilities, and defense strategies.">
+    <meta name="description" content="Open-source Headlamp plugins for Kubernetes monitoring, security, and storage visibility.">
 </head>
 <body>
     <nav class="navbar">
@@ -15,77 +15,79 @@
                 <h1>Privileged Escalation</h1>
             </div>
             <ul class="nav-links">
+                <li><a href="#plugins">Plugins</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#resources">Resources</a></li>
-                <li><a href="#community">Community</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#footer">Contact</a></li>
             </ul>
         </div>
     </nav>
 
     <header class="hero">
         <div class="container">
-            <h2>Understanding Privilege Escalation</h2>
-            <p>Learn about security vulnerabilities, attack techniques, and mitigation strategies</p>
+            <img src="privilegedescalation-logo.jpg" alt="Privileged Escalation Logo" class="hero-logo">
+            <h2>Open-source Headlamp plugins for Kubernetes</h2>
+            <p>We extend Headlamp with plugins for monitoring, security, and storage visibility — built by Privileged Escalation.</p>
         </div>
     </header>
 
     <main>
-        <section id="about" class="section">
+        <section id="plugins" class="section">
             <div class="container">
-                <h2>About This Project</h2>
-                <p>Privileged Escalation is an educational resource dedicated to understanding how attackers gain elevated access to systems and how defenders can prevent it. Whether you're a security professional, developer, or researcher, this project provides insights into:</p>
-                <ul>
-                    <li>Common privilege escalation techniques across operating systems</li>
-                    <li>Real-world vulnerability analysis</li>
-                    <li>Defense and mitigation strategies</li>
-                    <li>Best practices for secure system hardening</li>
-                </ul>
-            </div>
-        </section>
-
-        <section id="resources" class="section alternate">
-            <div class="container">
-                <h2>Resources</h2>
-                <p>Explore our collection of guides, tools, and research materials for understanding privilege escalation:</p>
-                <div class="resource-grid">
-                    <div class="resource-card">
-                        <h3>Documentation</h3>
-                        <p>Comprehensive guides on privilege escalation techniques and defense strategies</p>
+                <h2 class="section-title">Plugin Showcase</h2>
+                <p class="section-intro">All our plugins integrate directly into Headlamp, the extensible Kubernetes UI by the CNCF. Click any plugin to visit its repository.</p>
+                <div class="plugin-grid">
+                    <div class="plugin-card">
+                        <h3>headlamp-argocd-plugin</h3>
+                        <p>ArgoCD visibility — monitors ArgoCD Applications, Rollouts, and health status directly from your Kubernetes cluster.</p>
+                        <a href="https://git.farh.net/privilegedescalation/headlamp-argocd-plugin" class="plugin-link">View Repository</a>
                     </div>
-                    <div class="resource-card">
-                        <h3>Tools & Utilities</h3>
-                        <p>Community-contributed tools for testing and demonstrating vulnerabilities</p>
+                    <div class="plugin-card">
+                        <h3>headlamp-polaris-plugin</h3>
+                        <p>Fairwinds Polaris security and best-practices auditing — surface configuration issues and compliance gaps in your cluster.</p>
+                        <a href="https://git.farh.net/privilegedescalation/headlamp-polaris-plugin" class="plugin-link">View Repository</a>
                     </div>
-                    <div class="resource-card">
-                        <h3>Research Papers</h3>
-                        <p>Academic and practical research on privilege escalation and system security</p>
+                    <div class="plugin-card">
+                        <h3>headlamp-rook-plugin</h3>
+                        <p>Rook-Ceph cluster visibility — monitors CephCluster health, pool status, and CSI driver metrics for your storage infrastructure.</p>
+                        <a href="https://git.farh.net/privilegedescalation/headlamp-rook-plugin" class="plugin-link">View Repository</a>
+                    </div>
+                    <div class="plugin-card">
+                        <h3>headlamp-kube-vip-plugin</h3>
+                        <p>kube-vip virtual IP and load balancer visibility — track virtual IP allocations and load balancer endpoints across your clusters.</p>
+                        <a href="https://git.farh.net/privilegedescalation/headlamp-kube-vip-plugin" class="plugin-link">View Repository</a>
+                    </div>
+                    <div class="plugin-card">
+                        <h3>headlamp-sealed-secrets-plugin</h3>
+                        <p>Bitnami Sealed Secrets management with client-side encryption — create and manage sealed secrets directly from the Headlamp UI.</p>
+                        <a href="https://git.farh.net/privilegedescalation/headlamp-sealed-secrets-plugin" class="plugin-link">View Repository</a>
+                    </div>
+                    <div class="plugin-card">
+                        <h3>headlamp-tns-csi-plugin</h3>
+                        <p>TrueNAS CSI driver visibility and kbench storage benchmarking — monitor TrueNAS storage resources and run performance benchmarks.</p>
+                        <a href="https://git.farh.net/privilegedescalation/headlamp-tns-csi-plugin" class="plugin-link">View Repository</a>
+                    </div>
+                    <div class="plugin-card">
+                        <h3>headlamp-intel-gpu-plugin</h3>
+                        <p>Intel GPU device visibility and resource monitoring — track GPU device status, utilization, and health across your GPU-enabled nodes.</p>
+                        <a href="https://git.farh.net/privilegedescalation/headlamp-intel-gpu-plugin" class="plugin-link">View Repository</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="community" class="section">
+        <section id="about" class="section alternate">
             <div class="container">
-                <h2>Community</h2>
-                <p>Join a community of security professionals, researchers, and enthusiasts dedicated to understanding and defending against privilege escalation attacks.</p>
-                <p>We believe in responsible disclosure, ethical research, and collaborative security practices.</p>
-            </div>
-        </section>
-
-        <section id="contact" class="section alternate">
-            <div class="container">
-                <h2>Get Involved</h2>
-                <p>Interested in contributing? Have questions or suggestions?</p>
-                <p>Contact the team or visit our repository on GitHub to learn how you can participate in this project.</p>
+                <h2 class="section-title">About Privileged Escalation</h2>
+                <p>Privileged Escalation builds open-source plugins for <a href="https://headlamp.dev" target="_blank" rel="noopener">Headlamp</a>, the extensible Kubernetes UI hosted by the Cloud Native Computing Foundation (CNCF). Our plugins add visibility into monitoring, security, and storage tooling commonly deployed in Kubernetes environments.</p>
+                <p>All plugins are open-source and available on our <a href="https://git.farh.net/privilegedescalation/">Gitea organization</a>. Contributions are welcome.</p>
             </div>
         </section>
     </main>
 
-    <footer>
+    <footer id="footer">
         <div class="container">
-            <p>&copy; 2026 Privileged Escalation Project. All rights reserved.</p>
-            <p>Educational resource for security professionals and researchers.</p>
+            <p>&copy; 2026 Privileged Escalation</p>
+            <p><a href="https://git.farh.net/privilegedescalation/" target="_blank" rel="noopener">Gitea Organization</a></p>
         </div>
     </footer>
 </body>
