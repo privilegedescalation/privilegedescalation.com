@@ -1,0 +1,18 @@
+title: Privileged Escalation
+description: A resource for understanding privilege escalation techniques, vulnerabilities, and defense strategies
+baseurl: ""
+url: "https://privilegedescalation.com"
+
+# Build settings
+theme: null
+markdown: kramdown
+permalink: /:year/:month/:day/:title/
+
+# Exclude certain files from processing
+exclude:
+  - README.md
+  - .gitignore
+  - LICENSE
+
+# GitHub Pages settings
+github: [metadata]
