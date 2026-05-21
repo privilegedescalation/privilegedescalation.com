@@ -1,0 +1,289 @@
+:root {
+    --primary-color: #1a73e8;
+    --secondary-color: #3d5a80;
+    --accent-color: #00a896;
+    --light-bg: #f8f9fa;
+    --text-color: #202124;
+    --border-color: #dadce0;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: #ffffff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navigation */
+.navbar {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    z-index: 100;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    height: 50px;
+    width: auto;
+    border-radius: 4px;
+}
+
+.navbar h1 {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    opacity: 0.8;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.hero-logo {
+    height: 80px;
+    width: auto;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
+
+.hero h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.hero p {
+    font-size: 1.15rem;
+    opacity: 0.95;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Sections */
+.section {
+    padding: 60px 0;
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+    border-bottom: 3px solid var(--accent-color);
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+
+.section-intro {
+    font-size: 1.05rem;
+    margin-bottom: 2.5rem;
+    color: #5f6368;
+    max-width: 700px;
+}
+
+.section p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    line-height: 1.8;
+}
+
+.section a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.section a:hover {
+    text-decoration: underline;
+}
+
+.alternate {
+    background-color: var(--light-bg);
+}
+
+/* Plugin Grid */
+.plugin-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.plugin-card {
+    background: var(--card-bg);
+    padding: 1.75rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--card-shadow);
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.plugin-card:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    transform: translateY(-2px);
+}
+
+.plugin-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.75rem;
+    font-size: 1.15rem;
+    font-weight: 600;
+}
+
+.plugin-card p {
+    font-size: 0.95rem;
+    color: #5f6368;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.plugin-link {
+    display: inline-block;
+    color: var(--accent-color);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.plugin-link:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background-color: var(--secondary-color);
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+footer p {
+    margin-bottom: 0.5rem;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar .container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .hero {
+        padding: 60px 0;
+    }
+
+    .hero h2 {
+        font-size: 1.75rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .plugin-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .logo-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero-logo {
+        height: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 40px 0;
+    }
+
+    .section {
+        padding: 40px 0;
+    }
+
+    .hero h2 {
+        font-size: 1.5rem;
+    }
+
+    .logo {
+        height: 40px;
+    }
+
+    .hero-logo {
+        height: 50px;
+    }
+}

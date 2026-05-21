@@ -1,0 +1,12 @@
+_site/
+.jekyll-cache/
+.sass-cache/
+.DS_Store
+*.swp
+*.swo
+*~
+.env
+.venv
+*.pyc
+__pycache__/
+node_modules/
